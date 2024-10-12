@@ -1,0 +1,107 @@
+@import "../../responsive.scss";
+
+.searchBar{
+    .type{
+        button{
+            padding: 16px 28px;
+            border: 1px solid #999;
+            border-bottom: none;
+            cursor: pointer;
+            background-color: white;
+            text-transform: capitalize;
+            
+            // @include sm{
+            //     border-bottom: 1px solid #999;
+            //     margin-bottom: 5px;
+            // }
+
+            &.active{
+                background-color: black;
+                color: white;
+            }
+
+            &:first-child{
+                border-top-left-radius: 5px;
+                border-right: none;
+
+            }
+
+            &:last-child{
+                border-top-right-radius: 5px;
+                border-left: none;
+            }
+        }
+    }
+
+    form{
+        border: 1px solid #999;
+        display: flex;
+        justify-content: space-between;
+        height: 64px;
+        gap: 1px;
+        
+        @include sm{
+            flex-direction: column;
+            border: none;
+        }
+        
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        input{
+            border: none;
+            border-right: 1px solid #999;
+            padding: 0 10px;
+            width: 200px;
+            
+            &:nth-child(3){
+                border-right: none;
+            }
+
+            @include lg{
+                padding: 0 5px;
+
+                &:nth-child(2) ,&:nth-child(3){
+                    width: 140px;
+                }
+            }
+
+            @include md{
+                width: 200px;
+                &:nth-child(2) ,&:nth-child(3){
+                    width: 200px;
+                }
+            }
+
+            @include sm{
+                width: auto;
+                &:nth-child(2) ,&:nth-child(3){
+                    width: auto;
+                    border-right: 1px solid #999;
+                }
+                padding: 20px;
+                border: 1px solid #999;
+            }
+            
+        }
+
+        button{
+            border: none;
+            cursor: pointer;
+            background-color: rgba(241, 184, 127, 0.823);
+            flex: 1;
+
+            @include sm{
+                padding: 10px;
+            }
+
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

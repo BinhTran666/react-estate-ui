@@ -1,4 +1,4 @@
-@import "./responsive.scss";
+@import "../../responsive.scss";
 
 .layout{ 
     height: 100vh;
@@ -10,21 +10,22 @@
     display: flex;
     flex-direction: column;
     @include lg{
-        background-color: rgb(236, 188, 170);
+        // background-color: rgb(236, 188, 170);
         max-width: 1200px;
     }
 
     @include md{
-        background-color: rgb(172, 189, 221);
+        // background-color: rgb(172, 189, 221);
         max-width: 768px;
     }
 
     @include sm{
-        background-color: rgb(242, 108, 108);
+        // background-color: rgb(242, 108, 108);
         max-width: 640px;
     }
 
     .content{
-        flex: 1;
+        //flex: 1;
+        height: calc(100vh - 100px);
     }
 }
