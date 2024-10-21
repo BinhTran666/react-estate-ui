@@ -3,6 +3,7 @@ import HomePage from "./routes/homePage/homePage"
 import ListPage from "./routes/listPage/listPage"; // Add this import
 import Layout from "./routes/layout/layout";
 import * as ReactDOM from "react-dom/client";
+//import "./index.scss";
 
 import {
   createBrowserRouter,

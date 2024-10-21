@@ -1,15 +1,21 @@
 import './pin.scss'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Link } from 'react-router-dom';
 
 function Pin({items}) {
   return (
-    <div className='popuoContainer'>
-        <img src={items.img} alt="" />
-        <div className="textContainer">
-            <Link to={`/${items.id}`}>{items.tiltle}</Link>
-            <span className='bed'>{items.bedroom}</span>
-            <b>${items.price}</b>
+    <Marker position={[items.latitude,items.longitude]}>
+      <Popup>
+        <div className='popupContainer'>
+          <img src={items.img} alt="" />
+          <div className="textContainer">
+              <Link to={`/${items.id}`}>{items.title}</Link>
+              <span>{items.bedroom} bedroom</span>
+              <b>${items.price}</b>
+          </div>
         </div>
-    </div>
+      </Popup>
+    </Marker>
   )
 }
 
